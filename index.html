@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="bower_components/vis/dist/vis.js"></script>
+    <link href="bower_components/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/powersystem.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<p>
+    <label for="physics">Physics:</label>
+    <select id="physics" onchange="changePhysicsStatus();">
+        <option value="enable" selected>enable</option>
+        <option value="disable">disable</option>
+    </select>
+
+    <label for="hierarchy">Hierarchy:</label>
+    <select id="hierarchy" onchange="changeHierarchicalStatus();">
+        <option value="enable">enable</option>
+        <option value="disable" selected>disable</option>
+    </select>
+</p>
+
+<div id="mynetwork"></div>
+<div id="config"></div>
+
+<div id="network-popUp">
+    <span id="operation">node</span> <br>
+    <table style="margin:auto;"><tr>
+        <td>id</td><td><input id="node-id" value="new value" /></td>
+    </tr>
+        <tr>
+            <td>label</td><td><input id="node-label" value="new value" /></td>
+        </tr></table>
+    <input type="button" value="save" id="saveButton" />
+    <input type="button" value="cancel" id="cancelButton" />
+</div>
+
+<script type="text/javascript" src="js/powersystem.js"></script>
+
+
+</body>
+</html>
